@@ -23,7 +23,7 @@ import java.util.List;
 public class UsualPerson implements Person {
     @Id
     @Column
-    private int id;
+    private long id;
 
     @Column
     @Value("John Smith")
@@ -45,4 +45,9 @@ public class UsualPerson implements Person {
 
     @Setter(onMethod = @__(@Autowired))
     private List<?> contacts;
+
+    @Override
+    public void sayHello(Person person) {
+
+    }
 }

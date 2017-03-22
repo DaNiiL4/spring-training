@@ -11,7 +11,7 @@ public class Politeness {
 
     @Before("execution(* sellSquishee(lab.model.Customer, ..))")
     public void sayHello(JoinPoint joinPoint) {
-        String customerName = ((Customer) joinPoint.getArgs()[0]).getName();
+        String customerName = ((Customer) joinPoint.getArgs()[0]).name();
         AopLog.printf("Hello %s. How are you doing?%n", customerName);
     }
 

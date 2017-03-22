@@ -15,13 +15,13 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Accessors(chain = true)
+@Accessors(chain = true, fluent = true)
 @Entity
 @Component
 public class UsualPerson implements Person {
     @Id
     @Column
-    private int id;
+    private long id;
 
     @Column
     @Value("John Smith")
@@ -43,8 +43,4 @@ public class UsualPerson implements Person {
 
     @Resource
     private List<String> contacts;
-
-    @Override
-    public void sayHello(Person person) {
-    }
 }
